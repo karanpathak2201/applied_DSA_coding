@@ -1,0 +1,12 @@
+// In this problem we check the maximum element from the right of the array after that we after that we subtract the right max element from array element
+in this way we can calculate the maximum value
+public int maxProfit(int[] prices) {
+        int max_profit = 0;
+        int rm = prices[prices.length-1];
+        for(int i=prices.length-2;i>=0;i--){
+            rm = Math.max(rm,prices[i]);
+        max_profit = Math.max(max_profit,rm-prices[i]);
+        }
+        return max_profit;
+    }
+}
