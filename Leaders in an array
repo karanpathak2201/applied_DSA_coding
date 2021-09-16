@@ -1,0 +1,14 @@
+// in this array we check if the element is greater than all its right element than it is leader in an array
+public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        ArrayList<Integer> lead_ele = new ArrayList<Integer>();
+        lead_ele.add(A.get(A.size()-1));
+        int max = A.get(A.size()-1);
+        for(int i=A.size()-2;i>=0;i--){
+            if(A.get(i) > max){
+                max = A.get(i);
+                lead_ele.add(A.get(i));
+            }
+        }
+        return lead_ele;
+    }
+}
