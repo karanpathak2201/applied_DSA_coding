@@ -1,0 +1,13 @@
+// In this problem we can iterate over the loop and than we can check if the sum of the number is greater than the value at that index 
+// Then we can check the max value of the sum and the max_subarray sum value.
+public int maxSubArray(int[] nums) {
+       int present_sum =0;
+        int max_sum=Integer. MIN_VALUE;
+        for(int i=0;i<nums.length;i++){
+            present_sum = Math.max(present_sum+nums[i],nums[i]);
+            max_sum = Math.max(present_sum,max_sum);
+
+        }
+        return max_sum;
+    }
+}
